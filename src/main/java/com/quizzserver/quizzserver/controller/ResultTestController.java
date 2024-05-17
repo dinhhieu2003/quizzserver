@@ -43,4 +43,10 @@ public class ResultTestController {
 		System.out.println("Get all by test");
 		return resultTestService.getAllByTestId(id);
 	}
+	
+	@GetMapping("/test/{test_id}/{user_id}")
+	private List<ResultTest> getAllByTestIdAndUserId(@PathVariable("test_id") long test_id, 
+			@PathVariable("user_id") long user_id) {
+		return resultTestService.getAllByTestIdAndUserId(test_id, user_id);
+	}
 }

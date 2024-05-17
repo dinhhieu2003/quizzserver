@@ -31,5 +31,9 @@ public class ResultTestServiceImpl implements ResultTestService{
 	public List<ResultTest> getAllByTestId(long id) {
 		return resultTestRepository.findByTest_Id(id);
 	}
+	@Override
+	public List<ResultTest> getAllByTestIdAndUserId(long test_id, long user_id) {
+		return resultTestRepository.findByTest_IdAndUser_Id(test_id, user_id);
+	}
 
 }

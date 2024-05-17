@@ -9,4 +9,5 @@ public interface ResultTestService {
 	List<ResultTest> getAll();
 	List<ResultTest> getAllByUserId(long id);
 	List<ResultTest> getAllByTestId(long id);
+	List<ResultTest> getAllByTestIdAndUserId(long test_id, long user_id);
 }
