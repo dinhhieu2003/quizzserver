@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.quizzserver.quizzserver.dto.TokenResponse;
 import com.quizzserver.quizzserver.entity.User;
@@ -47,5 +48,11 @@ public class WebController {
 			return "success";
 		} 
 		return "failed";
+	}
+	
+	@GetMapping("/hello")
+	@ResponseBody
+	public String hello() {
+		return "hello";
 	}
 }
