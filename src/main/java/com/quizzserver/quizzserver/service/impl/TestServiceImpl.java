@@ -19,5 +19,9 @@ public class TestServiceImpl implements TestService{
 	public List<Test> getAll() {
 		return testRepository.findAll();
 	}
+	@Override
+	public Test add(Test test) {
+		return testRepository.save(test);
+	}
 
 }
