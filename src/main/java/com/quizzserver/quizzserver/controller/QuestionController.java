@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.quizzserver.quizzserver.dto.ListQuestionTestDTO;
 import com.quizzserver.quizzserver.entity.Question;
-import com.quizzserver.quizzserver.entity.Test;
 import com.quizzserver.quizzserver.service.QuestionService;
 
 import lombok.RequiredArgsConstructor;
