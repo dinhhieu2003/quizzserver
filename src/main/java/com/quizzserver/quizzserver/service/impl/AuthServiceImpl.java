@@ -97,7 +97,7 @@ public class AuthServiceImpl implements AuthService{
 			tokenResponse.setError(false);
 			tokenResponse.setData(activateToken);
 			try {
-				emailSender.sendActivationLink(userOptional.get(), "http://localhost:8080", activateToken);
+				emailSender.sendActivationLink(userOptional.get(), "https://quizzserver-ol4w.onrender.com", activateToken);
 			} catch (UnsupportedEncodingException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
