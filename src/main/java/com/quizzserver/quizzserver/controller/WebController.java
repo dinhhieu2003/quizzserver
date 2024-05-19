@@ -51,7 +51,6 @@ public class WebController {
 	}
 	
 	@GetMapping("/hello")
-	@ResponseBody
 	public String hello() {
 		return "hello";
 	}
