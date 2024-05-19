@@ -20,11 +20,11 @@ FROM eclipse-temurin:17-jdk
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the jar file from the build stage
-COPY --from=build /app/target/*.jar app.jar
+# Copy the WAR file from the build stage
+COPY --from=build /app/target/*.war app.war
 
 # Expose the port on which the application runs
 EXPOSE 8080
 
 # Command to run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.war"]
